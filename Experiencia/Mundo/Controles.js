@@ -74,6 +74,32 @@ export default class Controles {
             },
             "same"
           );
+        this.terceiroMovimento = new GSAP.timeline({
+          scrollTrigger: {
+            trigger: ".terceiro-movimento",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 0.6,
+            invalidateOnRefresh: true,
+          },
+        })
+          .to(
+            this.camera.cameraOrtografica.position,
+            {
+              y: 3.5,
+              x: -5.1,
+            },
+            "same"
+          )
+          .to(
+            this.quarto.scale,
+            {
+              x: 1,
+              y: 1,
+              z: 1,
+            },
+            "same"
+          );
       },
 
       // Mobile
