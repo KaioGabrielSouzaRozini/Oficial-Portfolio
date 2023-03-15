@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+h1,
+section,
+p,
+span,
+svg {
+  transition: background-color 0.5s, color 0.5s;
+}
+:root {
+  --color-text-light: #333332;
+  --color-background-light: #fae5e5;
+  --color-blue-light: #d38686;
+  --color-purple-light: #7f80c5;
+  --color-green-light: #be77b5;
+
+  --color-text-dark: #fae5e5;
+  --color-background-dark: #b86868;
+}
+.claro-tema {
+  --color-text: var(--color-text-light);
+  --color-background: var(--color-background-light);
+  --color-purple: var(--color-purple-light);
+  --color-green: var(--color-green-light);
+  --color-blue: var(--color-blue-light);
+}
+.escuro-tema {
+  --color-text: var(--color-text-dark);
+  --color-background: var(--color-background-dark);
+  --color-purple: var(--color-text-dark);
+  --color-green: var(--color-text-dark);
+  --color-blue: var(--color-text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-blue-light);
+}
+
+/* Experiencia --------------------------------*/
+
+.experiencia {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+}
+
+.experiencia-canvas {
+  width: 100%;
+  height: 100vh;
+}
+
+/* Pagina -------------------------------------*/
+
+.pagina {
+  z-index: 99999;
+  width: 100%;
+  height: 100vh;
+}
+
+.pagina-empacotada {
+  position: relative;
+}
+/* Barra de Mudanças -------------------------------------*/
+.barra-de-mudanca {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 48px;
+  right: 48px;
+  z-index: 99999999999999;
+}
+
+.dia,
+.noite {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-text);
+}
+
+.botao-barra {
+  cursor: pointer;
+  position: relative;
+  width: 56px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-blue);
+  border-radius: 999px;
+  margin: 0px 16px;
+  border: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.circulo {
+  position: absolute;
+  left: 6px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-background);
+  transition: all 0.2s ease-in-out;
+}
+
+.barra-de-mudanca:hover .circulo {
+  transform: scale(0.9);
+}
+
+.slide {
+  left: 31px;
+}
+
+/* Titulos -------------------------------------*/
+
+.titulo {
+  width: 100%;
+  height: 100vh;
+}
+
+.titulo-empacotado {
+  position: relative;
+  height: 100%;
+  width: calc(100% - 160px);
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.titulo-main {
+  position: absolute;
+  bottom: 150px;
+  left: 0;
+  color: var(--color-text);
+}
+
+.titulo-segundo {
+  position: absolute;
+  top: calc(30% - 120px);
+  right: 0;
+  color: var(--color-text);
+}
+
+.titulo-main-titulo {
+  font-size: 64px;
+  color: var(--color-text);
+}
+.titulo-main-descricao {
+  font-size: 32px;
+  color: var(--color-text);
+}
+.titulo-segundo-titulo {
+  font-size: 32px;
+  color: var(--color-text);
+  text-transform: uppercase;
+}
+.titulo-segundo-descricao {
+  font-size: 32px;
+}
+
+/* Seções -------------------------------------*/
+.margen-secao {
+  height: 3000px;
+  width: 100%;
+}
+
+.secao {
+  position: relative;
+  width: 50%;
+  padding: 1000px 4%;
+  margin: 0;
+  background-color: var(--color-background);
+  overflow: hidden;
+}
+.esquerda {
+  margin-right: auto;
+  border-top-right-radius: 700px 700px;
+  border-bottom-right-radius: 700px 700px;
+}
+.direita {
+  margin-left: auto;
+  border-top-left-radius: 700px 700px;
+  border-bottom-left-radius: 700px 700px;
+}
+
+.intro-secao {
+  position: relative;
+  padding: 20% 5%;
+  border-bottom: 2px solid var(--color-blue);
+  padding-bottom: 400px;
+}
+
+.secao-detalhes {
+  position: relative;
+  padding: 20% 5%;
+}
+
+.secao-cabeca {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.8;
+  margin-top: 64px;
+  color: var(--color-text);
+}
+
+.secao-texto {
+  line-height: 2;
+  margin-top: 18px;
+  font-size: 16px;
+  color: var(--color-text);
+}
+/* Decoração seções ----------------------------------------*/
+
+.secao-titulo {
+  position: relative;
+  color: var(--color-blue);
+}
+.secao-titulo-texto {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: var(--color-blue);
+}
+
+.secao-numero {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  color: var(--color-blue);
+  font-size: 24px;
+}
+@media (max-width: 968px) {
+  .secao {
+    width: 100%;
+  }
+  .titulo-main {
+    bottom: 120px;
+  }
+  .titulo-segundo {
+    top: 160px;
+  }
+  .titulo-empacotado {
+    width: calc(100% - 60px);
+  }
+  .titulo-main-titulo {
+    font-size: 32px;
+  }
+  .titulo-main-descricao {
+    font-size: 18px;
+  }
+  .titulo-segundo-descricao {
+    font-size: 18px;
+  }
+}
