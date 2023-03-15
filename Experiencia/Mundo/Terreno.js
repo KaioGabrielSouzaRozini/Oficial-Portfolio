@@ -33,12 +33,12 @@ export default class Terreno {
     this.segundoCirculo = new THREE.Mesh(geometria, material2);
     this.terceiroCirculo = new THREE.Mesh(geometria, material3);
 
-    this.primeiroCirculo.position.y = -0.28;
+    this.primeiroCirculo.position.y = -0.79;
 
-    this.segundoCirculo.position.y = -0.28;
+    this.segundoCirculo.position.y = -0.78;
     this.segundoCirculo.position.x = 2;
 
-    this.terceiroCirculo.position.y = -0.27;
+    this.terceiroCirculo.position.y = -0.77;
 
     this.primeiroCirculo.scale.set(0, 0, 0);
     this.segundoCirculo.scale.set(0, 0, 0);

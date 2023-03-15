@@ -2,6 +2,6 @@ export default [
   {
     name: "quarto",
     type: "glbModel",
-    path: "/models/LamemRestrant10.glb",
+    path: "/models/RamenRestrant4.glb",
   },
 ];
