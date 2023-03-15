@@ -25,9 +25,9 @@ export default class Terreno {
   setCirculos() {
     const geometria = new THREE.CircleGeometry(5, 64);
 
-    const material = new THREE.MeshStandardMaterial({ color: 0x6295b5 });
-    const material2 = new THREE.MeshStandardMaterial({ color: 0xcc7ac8 });
-    const material3 = new THREE.MeshStandardMaterial({ color: 0x7bc7a3 });
+    const material = new THREE.MeshStandardMaterial({ color: 0xff8484 });
+    const material2 = new THREE.MeshStandardMaterial({ color: 0x7f80c5 });
+    const material3 = new THREE.MeshStandardMaterial({ color: 0xbe77b5 });
 
     this.primeiroCirculo = new THREE.Mesh(geometria, material);
     this.segundoCirculo = new THREE.Mesh(geometria, material2);

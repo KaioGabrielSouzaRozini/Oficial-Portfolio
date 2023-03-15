@@ -8,6 +8,7 @@ import espolhos from "./Util/espolhos";
 import Camera from "./Camera";
 import Tema from "./Tema";
 import Renderizar from "./Renderizar";
+import Precarregamento from "./Precarregamento";
 
 import Mundo from "./Mundo/Mundo";
 
@@ -26,6 +27,7 @@ export default class Experiencia {
     this.recursos = new Recursos(espolhos);
     this.tema = new Tema();
     this.mundo = new Mundo();
+    this.precarregamento = new Precarregamento();
 
     this.tamanho.on("resize", () => {
       this.resize();

@@ -10,6 +10,10 @@ body {
   font-family: "Raleway", sans-serif;
 }
 
+body {
+  overflow: hidden;
+}
+
 h1,
 section,
 p,
@@ -20,7 +24,7 @@ svg {
 :root {
   --color-text-light: #333332;
   --color-background-light: #fae5e5;
-  --color-blue-light: #d38686;
+  --color-blue-light: #ff8484;
   --color-purple-light: #7f80c5;
   --color-green-light: #be77b5;
 
@@ -151,20 +155,20 @@ a {
   position: absolute;
   top: calc(30% - 120px);
   right: 0;
-  color: var(--color-text);
+  color: transparent;
 }
 
 .titulo-main-titulo {
   font-size: 64px;
-  color: var(--color-text);
+  color: transparent;
 }
 .titulo-main-descricao {
   font-size: 32px;
-  color: var(--color-text);
+  color: transparent;
 }
 .titulo-segundo-titulo {
   font-size: 32px;
-  color: var(--color-text);
+  color: transparent;
   text-transform: uppercase;
 }
 .titulo-segundo-descricao {

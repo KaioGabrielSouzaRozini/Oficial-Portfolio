@@ -7,8 +7,11 @@ import Quarto from "./Quarto";
 import Terreno from "./Terreno";
 import Controles from "./Controles";
 
-export default class Mundo {
+import { EventEmitter } from "events";
+
+export default class Mundo extends EventEmitter {
   constructor() {
+    super();
     this.experiencia = new Experiencia();
     this.tamanho = this.experiencia.tamanho;
     this.cena = this.experiencia.cena;
@@ -22,6 +25,7 @@ export default class Mundo {
       this.quarto = new Quarto();
       this.terreno = new Terreno();
       this.controles = new Controles();
+      this.emit("mundopronto");
     });
 
     this.tema.on("switch", (tema) => {
