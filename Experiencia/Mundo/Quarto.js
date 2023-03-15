@@ -37,9 +37,9 @@ export default class Quarto {
       }
     });
 
-    const light = new THREE.PointLight(0xff0000, 2, 100);
-    light.position.set(-2.14965, -2.61245, 3.10312);
-    this.quartoAtual.add(light);
+    const luz = new THREE.PointLight(0xff0000, 2, 100);
+    luz.position.set(-2.14965, -2.61245, 3.10312);
+    this.quartoAtual.add(luz);
 
     this.cena.add(this.quartoAtual);
     this.quartoAtual.scale.set(0.3, 0.3, 0.3);

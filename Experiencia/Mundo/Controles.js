@@ -19,19 +19,69 @@ export default class Controles {
   }
 
   setCaminho() {
-    this.timeline = new GSAP.timeline();
-    this.timeline.to(this.quarto.position, {
-      x: () => {
-        return this.tamanho.width * 0.0015;
+    ScrollTrigger.matchMedia({
+      // PC
+      "(min-width: 969px)": () => {
+        console.log("pc");
+        this.primeiroMovimento = new GSAP.timeline({
+          scrollTrigger: {
+            trigger: ".primeiro-movimento",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 0.6,
+            // markers: true,
+            invalidateOnRefresh: true,
+          },
+        });
+        this.primeiroMovimento.fromTo(
+          this.quarto.position,
+          { x: 0, y: -0.5, z: 0 },
+          {
+            x: () => {
+              return this.tamanho.width * 0.0014;
+            },
+          }
+        );
+
+        // Segundo Movimento
+        this.segundoMovimento = new GSAP.timeline({
+          scrollTrigger: {
+            trigger: ".segundo-movimento",
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 0.6,
+            invalidateOnRefresh: true,
+          },
+        })
+          .to(
+            this.quarto.position,
+            {
+              x: () => {
+                return -1;
+              },
+              z: () => {
+                return this.tamanho.height * 0.002;
+              },
+            },
+            "same"
+          )
+          .to(
+            this.quarto.scale,
+            {
+              x: 0.6,
+              y: 0.6,
+              z: 0.6,
+            },
+            "same"
+          );
       },
-      scrollTrigger: {
-        trigger: ".primeiro-movimento",
-        markers: true,
-        start: "top top",
-        end: "bottom bottom",
-        scrub: 0.6,
-        invalidateOnRefresh: true,
+
+      // Mobile
+      "(max-width: 969px)": () => {
+        console.log("mobile");
       },
+
+      all: function () {},
     });
   }
 
