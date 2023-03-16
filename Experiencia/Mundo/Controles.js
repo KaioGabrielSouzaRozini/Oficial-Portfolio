@@ -264,7 +264,7 @@ export default class Controles {
             this.um = GSAP.to(child.position, {
               x: -2.92612,
               z: 1.86898,
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "PoteBolo") {
@@ -273,7 +273,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "BolinhasDeChuva") {
@@ -282,7 +282,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "PoteBolinhos") {
@@ -291,7 +291,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "BolinhoNoPalito1") {
@@ -299,8 +299,8 @@ export default class Controles {
               x: 1,
               y: 1,
               z: 1,
-              ease: "back.out(2)",
-              duration: 0.3,
+              ease: "back.out(1)",
+              duration: 0.1,
             });
           }
           if (child.name === "BolinhoNoPalito2") {
@@ -308,8 +308,8 @@ export default class Controles {
               x: 1,
               y: 1,
               z: 1,
-              ease: "back.out(2)",
-              duration: 0.3,
+              ease: "back.out(1)",
+              duration: 0.1,
             });
           }
           if (child.name === "BolinhoNoPalito3") {
@@ -317,8 +317,8 @@ export default class Controles {
               x: 1,
               y: 1,
               z: 1,
-              ease: "back.out(2)",
-              duration: 0.3,
+              ease: "back.out(1)",
+              duration: 0.1,
             });
           }
           if (child.name === "BoteBoloDoce2") {
@@ -327,7 +327,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "BoloDoce11") {
@@ -336,7 +336,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "BoloDoce22") {
@@ -345,7 +345,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "BoloDoce33") {
@@ -354,7 +354,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "Tijela1001") {
@@ -363,7 +363,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "BoteBoloDoce") {
@@ -372,7 +372,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "BoloDoce1") {
@@ -381,7 +381,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "BoloDoce2") {
@@ -390,7 +390,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "BoloDoce3") {
@@ -399,7 +399,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "TabuaSUshi") {
@@ -417,7 +417,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "Sushis1") {
@@ -426,7 +426,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "Sashimi2") {
@@ -435,7 +435,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.1,
             });
           }
           if (child.name === "Sashimi3") {
@@ -444,7 +444,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.1,
             });
           }
           if (child.name === "Sashimi4") {
@@ -453,7 +453,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.1,
             });
           }
           if (child.name === "Sashimi5") {
@@ -462,7 +462,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.1,
             });
           }
           if (child.name === "sashimi1") {
@@ -471,7 +471,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.1,
             });
           }
           if (child.name === "Cadeira1001") {
@@ -480,7 +480,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
           if (child.name === "Cadeira1002") {
@@ -489,7 +489,7 @@ export default class Controles {
               y: 1,
               z: 1,
               ease: "back.out(2)",
-              duration: 0.3,
+              duration: 0.2,
             });
           }
         });

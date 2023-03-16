@@ -157,6 +157,36 @@ a {
   right: 0;
   color: transparent;
 }
+.titulo-terceiro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: calc(50% - 120px);
+}
+
+.imagemFlecha {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  color: var(--color-text);
+  transform: translate(-50%, -50%);
+  animation: bounce 0.5s ease-in alternate infinite;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(8px);
+  }
+}
+
+.titulo-terceiro-titulo {
+  font-size: 32px;
+  color: var(--color-text);
+}
 
 .titulo-main-titulo {
   font-size: 64px;

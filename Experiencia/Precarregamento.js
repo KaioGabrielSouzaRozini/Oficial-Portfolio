@@ -832,6 +832,12 @@ export default class Precarregamento extends EventEmitter {
     window.addEventListener("wheel", this.scrollUmaVez);
   }
   async comecaIntroducao() {
+    document.querySelector(".titulo-terceiro-titulo").style.color =
+      "transparent";
+
+    document
+      .querySelector(".imagemFlecha")
+      .removeChild(document.querySelector(".flecha"));
     await this.intro();
     this.emit("acabouAnimacao");
     document.body.style.overflow = "inherit";
