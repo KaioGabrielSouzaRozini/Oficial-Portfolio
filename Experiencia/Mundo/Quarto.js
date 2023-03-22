@@ -49,7 +49,7 @@ export default class Quarto {
       this.quartoFilho[child.name.toLowerCase()] = child;
     });
 
-    this.luz = new THREE.PointLight(0xff0000, 1, 50);
+    this.luz = new THREE.PointLight(0xffffaa, 1, 50);
     this.luz.position.set(-2.14965, -2.61245, 3.10312);
     this.quartoAtual.add(this.luz);
 

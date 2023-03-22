@@ -29,7 +29,7 @@ svg {
   --color-green-light: #be77b5;
 
   --color-text-dark: #fae5e5;
-  --color-background-dark: #b86868;
+  --color-background-dark: #d22238;
 }
 .claro-tema {
   --color-text: var(--color-text-light);
@@ -205,6 +205,13 @@ a {
   font-size: 32px;
 }
 
+.imgTitulo {
+  width: 32px;
+  height: 32px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
 /* Seções -------------------------------------*/
 .margen-secao {
   height: 3000px;
@@ -255,6 +262,17 @@ a {
   margin-top: 18px;
   font-size: 16px;
   color: var(--color-text);
+}
+
+.linksDetalhes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.imgLinks {
+  width: 200px;
+  height: 56px;
+  margin-bottom: 40px;
 }
 /* Decoração seções ----------------------------------------*/
 
