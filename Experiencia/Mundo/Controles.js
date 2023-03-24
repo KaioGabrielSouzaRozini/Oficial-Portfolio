@@ -46,7 +46,6 @@ export default class Controles {
             start: "top top",
             end: "bottom bottom",
             scrub: 0.6,
-            // markers: true,
             invalidateOnRefresh: true,
           },
         });
@@ -74,7 +73,7 @@ export default class Controles {
             this.quarto.position,
             {
               x: () => {
-                return -1;
+                return this.tamanho.width * -0.0014;
               },
               z: () => {
                 return this.tamanho.height * 0.002;
@@ -104,7 +103,9 @@ export default class Controles {
             this.camera.cameraOrtografica.position,
             {
               y: 3.4,
-              x: -8.9,
+              x: () => {
+                return this.tamanho.width * -0.001 - 8.5;
+              },
             },
             "same"
           )
