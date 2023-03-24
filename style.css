@@ -22,33 +22,33 @@ svg {
   transition: background-color 0.5s, color 0.5s;
 }
 :root {
-  --color-text-light: #333332;
-  --color-background-light: #fae5e5;
-  --color-blue-light: #ff8484;
-  --color-purple-light: #7f80c5;
-  --color-green-light: #be77b5;
+  --cor-texto-luz: #333332;
+  --cor-background-luz: #ffefef;
+  --cor-vermelho-luz: #fc6d6d;
+  --cor-azul-luz: #7f80c5;
+  --cor-rosa-luz: #e284d6;
 
-  --color-text-dark: #fae5e5;
-  --color-background-dark: #d22238;
+  --cor-texto-escuro: #fae5e5;
+  --cor-background-escuro: #d22238;
 }
 .claro-tema {
-  --color-text: var(--color-text-light);
-  --color-background: var(--color-background-light);
-  --color-purple: var(--color-purple-light);
-  --color-green: var(--color-green-light);
-  --color-blue: var(--color-blue-light);
+  --cor-texto: var(--cor-texto-luz);
+  --cor-background: var(--cor-background-luz);
+  --cor-azul: var(--cor-azul-luz);
+  --cor-rosa: var(--cor-rosa-luz);
+  --cor-vermelho: var(--cor-vermelho-luz);
 }
 .escuro-tema {
-  --color-text: var(--color-text-dark);
-  --color-background: var(--color-background-dark);
-  --color-purple: var(--color-text-dark);
-  --color-green: var(--color-text-dark);
-  --color-blue: var(--color-text-dark);
+  --cor-texto: var(--cor-texto-escuro);
+  --cor-background: var(--cor-background-escuro);
+  --cor-azul: var(--cor-texto-escuro);
+  --cor-rosa: var(--cor-texto-escuro);
+  --cor-vermelho: var(--cor-texto-escuro);
 }
 
 a {
   text-decoration: none;
-  color: var(--color-blue-light);
+  color: var(--cor-vermelho-luz);
 }
 
 /* Experiencia --------------------------------*/
@@ -93,7 +93,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: var(--color-text);
+  color: var(--cor-texto);
 }
 
 .botao-barra {
@@ -104,7 +104,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-blue);
+  background-color: var(--cor-vermelho);
   border-radius: 999px;
   margin: 0px 16px;
   border: none;
@@ -117,7 +117,7 @@ a {
   border-radius: 50%;
   width: 20px;
   height: 20px;
-  background-color: var(--color-background);
+  background-color: var(--cor-background);
   transition: all 0.2s ease-in-out;
 }
 
@@ -148,7 +148,7 @@ a {
   position: absolute;
   bottom: 150px;
   left: 0;
-  color: var(--color-text);
+  color: var(--cor-texto);
 }
 
 .titulo-segundo {
@@ -169,7 +169,7 @@ a {
   position: absolute;
   top: 80%;
   left: 50%;
-  color: var(--color-text);
+  color: var(--cor-texto);
   transform: translate(-50%, -50%);
   animation: bounce 0.5s ease-in alternate infinite;
 }
@@ -185,7 +185,7 @@ a {
 
 .titulo-terceiro-titulo {
   font-size: 32px;
-  color: var(--color-text);
+  color: var(--cor-texto);
 }
 
 .titulo-main-titulo {
@@ -223,7 +223,7 @@ a {
   width: 50%;
   padding: 1000px 4%;
   margin: 0;
-  background-color: var(--color-background);
+  background-color: var(--cor-background);
   overflow: hidden;
 }
 .esquerda {
@@ -240,7 +240,7 @@ a {
 .intro-secao {
   position: relative;
   padding: 20% 5%;
-  border-bottom: 2px solid var(--color-blue);
+  border-bottom: 2px solid var(--cor-vermelho);
   padding-bottom: 400px;
 }
 
@@ -254,14 +254,14 @@ a {
   font-weight: 700;
   line-height: 1.8;
   margin-top: 64px;
-  color: var(--color-text);
+  color: var(--cor-texto);
 }
 
 .secao-texto {
   line-height: 2;
   margin-top: 18px;
   font-size: 16px;
-  color: var(--color-text);
+  color: var(--cor-texto);
 }
 
 .linksDetalhes {
@@ -278,21 +278,48 @@ a {
 
 .secao-titulo {
   position: relative;
-  color: var(--color-blue);
+  color: var(--cor-vermelho);
 }
 .secao-titulo-texto {
   font-size: 40px;
   text-transform: uppercase;
-  color: var(--color-blue);
+  color: var(--cor-vermelho);
 }
 
 .secao-numero {
   position: absolute;
   bottom: 15px;
   right: 0;
-  color: var(--color-blue);
+  color: var(--cor-vermelho);
   font-size: 24px;
 }
+
+/* Outras cores */
+
+.azul-texto {
+  color: var(--cor-azul);
+}
+
+.azul-borda {
+  border-color: var(--cor-azul);
+}
+
+.azul-background {
+  background-color: var(--cor-azul);
+}
+
+.rosa-texto {
+  color: var(--cor-rosa);
+}
+
+.rosa-borda {
+  border-color: var(--cor-rosa);
+}
+
+.rosa-background {
+  background-color: var(--cor-rosa);
+}
+
 @media (max-width: 968px) {
   .secao {
     width: 100%;

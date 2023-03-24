@@ -485,13 +485,17 @@ export default class Precarregamento extends EventEmitter {
           },
           "same10"
         )
-        .to(this.quartoFilho.cano.scale, {
-          x: 1,
-          y: 1,
-          z: 1,
-          ease: "back.out(1)",
-          duration: 0.2,
-        })
+        .to(
+          this.quartoFilho.cano.scale,
+          {
+            x: 1,
+            y: 1,
+            z: 1,
+            ease: "back.out(1)",
+            duration: 0.2,
+          },
+          "same10"
+        )
         .to(
           this.quartoFilho.placa1.scale,
           {
@@ -523,7 +527,7 @@ export default class Precarregamento extends EventEmitter {
             ease: "back.out(1)",
             duration: 0.2,
           },
-          "arcondicionado"
+          "same9"
         )
         .to(
           this.quartoFilho.arcondicionado3.scale,
@@ -534,7 +538,7 @@ export default class Precarregamento extends EventEmitter {
             ease: "back.out(1)",
             duration: 0.2,
           },
-          "arcondicionado"
+          "same9"
         )
         .to(
           this.quartoFilho.escada1.scale,
@@ -545,7 +549,7 @@ export default class Precarregamento extends EventEmitter {
             ease: "back.out(1)",
             duration: 0.2,
           },
-          "arcondicionado"
+          "same9"
         )
         .to(
           this.quartoFilho.poste1.scale,
@@ -813,7 +817,7 @@ export default class Precarregamento extends EventEmitter {
         )
         .to(this.quarto.rotation, {
           y: 6.3,
-          duration: 4,
+          duration: 3.5,
           onComplete: resolve,
         });
     });
@@ -842,12 +846,12 @@ export default class Precarregamento extends EventEmitter {
     this.emit("acabouAnimacao");
     document.body.style.overflow = "inherit";
     document.querySelector(".titulo-main-titulo").style.color =
-      "var(--color-text)";
+      "var(--cor-texto)";
     document.querySelector(".titulo-main-descricao").style.color =
-      "var(--color-text)";
+      "var(--cor-texto)";
     document.querySelector(".titulo-segundo-titulo").style.color =
-      "var(--color-text)";
+      "var(--cor-texto)";
     document.querySelector(".titulo-segundo-descricao").style.color =
-      "var(--color-text)";
+      "var(--cor-texto)";
   }
 }
