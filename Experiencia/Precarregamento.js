@@ -826,14 +826,38 @@ export default class Precarregamento extends EventEmitter {
   onScroll(e) {
     if (e.deltaY > 0) {
       console.log("evento adicionado");
-      window.removeEventListener("wheel", this.scrollUmaVez);
+      this.removeEventListeners();
       this.comecaIntroducao();
     }
+  }
+  onTouch(e) {
+    this.initalY = e.touches[0].clientY;
+  }
+
+  onTouchMove(e) {
+    let currentY = e.touches[0].clientY;
+    let difference = this.initalY - currentY;
+    if (difference > 0) {
+      console.log("swipped up");
+      this.removeEventListeners();
+      this.comecaIntroducao();
+    }
+    this.intialY = null;
+  }
+
+  removeEventListeners() {
+    window.removeEventListener("wheel", this.scrollUmaVez);
+    window.removeEventListener("touchstart", this.touchStart);
+    window.removeEventListener("touchmove", this.touchMove);
   }
 
   introducao() {
     this.scrollUmaVez = this.onScroll.bind(this);
+    this.touchStart = this.onTouch.bind(this);
+    this.touchMove = this.onTouchMove.bind(this);
     window.addEventListener("wheel", this.scrollUmaVez);
+    window.addEventListener("touchstart", this.touchStart);
+    window.addEventListener("touchmove", this.touchMove);
   }
   async comecaIntroducao() {
     document
@@ -843,7 +867,9 @@ export default class Precarregamento extends EventEmitter {
     document
       .querySelector(".imagemFlecha")
       .removeChild(document.querySelector(".flecha"));
+    this.moveFlag = false;
     await this.intro();
+    this.scaleFlag = false;
     this.emit("acabouAnimacao");
     document.body.style.overflow = "inherit";
     document.querySelector(".titulo-main-titulo").style.color =
@@ -854,5 +880,33 @@ export default class Precarregamento extends EventEmitter {
       "var(--cor-texto)";
     document.querySelector(".titulo-segundo-descricao").style.color =
       "var(--cor-texto)";
+  }
+  move() {
+    if (this.device === "desktop") {
+      this.room.position.set(-1, 0, 0);
+    } else {
+      this.room.position.set(0, 0, -1);
+    }
+  }
+
+  scale() {
+    this.roomChildren.rectLight.width = 0;
+    this.roomChildren.rectLight.height = 0;
+
+    if (this.device === "desktop") {
+      this.room.scale.set(0.3, 0.3, 0.3);
+    } else {
+      this.room.scale.set(0.19, 0.19, 0.19);
+    }
+  }
+
+  update() {
+    if (this.moveFlag) {
+      this.move();
+    }
+
+    if (this.scaleFlag) {
+      this.scale();
+    }
   }
 }
