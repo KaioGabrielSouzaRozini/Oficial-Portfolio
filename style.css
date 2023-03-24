@@ -165,6 +165,17 @@ a {
   padding-top: calc(50% - 120px);
 }
 
+@media (max-width: 650px) {
+  .titulo-terceiro {
+    padding-top: calc(80%);
+  }
+}
+@media (max-width: 750px) {
+  .titulo-terceiro {
+    padding-top: calc(70%);
+  }
+}
+
 .imagemFlecha {
   position: absolute;
   top: 80%;
