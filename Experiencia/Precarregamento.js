@@ -825,7 +825,6 @@ export default class Precarregamento extends EventEmitter {
 
   onScroll(e) {
     if (e.deltaY > 0) {
-      console.log("evento adicionado");
       this.removeEventListeners();
       this.comecaIntroducao();
     }
@@ -872,6 +871,8 @@ export default class Precarregamento extends EventEmitter {
     this.scaleFlag = false;
     this.emit("acabouAnimacao");
     document.body.style.overflow = "inherit";
+    document.body.style.scrollBehavior = "smooth";
+
     document.querySelector(".titulo-main-titulo").style.color =
       "var(--cor-texto)";
     document.querySelector(".titulo-main-descricao").style.color =
