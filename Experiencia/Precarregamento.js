@@ -23,6 +23,34 @@ export default class Precarregamento extends EventEmitter {
     this.quartoFilho = this.experiencia.mundo.quarto.quartoFilho;
     console.log(this.quartoFilho);
   }
+  primeiraIntroducao() {
+    return new Promise((resolve) => {
+      this.timeline = new GSAP.timeline();
+      this.timeline.to(".preCarregamento", {
+        opacity: 0,
+        delay: 1,
+        onComplete: () => {
+          document.querySelector(".preCarregamento").classList.add("hidden");
+        },
+      });
+      this.timeline
+        .to(".barra-de-mudanca", {
+          opacity: 1,
+        })
+        .to(".titulo-terceiro-titulo", {
+          opacity: 1,
+        })
+
+        .to(
+          ".imagemFlecha",
+          {
+            opacity: 1,
+            onComplete: resolve,
+          },
+          "same"
+        );
+    });
+  }
 
   intro() {
     return new Promise((resolve) => {
@@ -850,7 +878,10 @@ export default class Precarregamento extends EventEmitter {
     window.removeEventListener("touchmove", this.touchMove);
   }
 
-  introducao() {
+  async introducao() {
+    console.log("eae1");
+    await this.primeiraIntroducao();
+    console.log("eae2");
     this.scrollUmaVez = this.onScroll.bind(this);
     this.touchStart = this.onTouch.bind(this);
     this.touchMove = this.onTouchMove.bind(this);
