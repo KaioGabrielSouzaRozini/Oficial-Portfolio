@@ -34,6 +34,22 @@ export default class Precarregamento extends EventEmitter {
         },
       });
       this.timeline
+        .to(
+          ".preCarregamento",
+          {
+            width: 0,
+            height: 0,
+          },
+          "same"
+        )
+        .to(
+          ".preCarregamento-empacotado",
+          {
+            width: 0,
+            height: 0,
+          },
+          "same"
+        )
         .to(".barra-de-mudanca", {
           opacity: 1,
         })
@@ -41,14 +57,10 @@ export default class Precarregamento extends EventEmitter {
           opacity: 1,
         })
 
-        .to(
-          ".imagemFlecha",
-          {
-            opacity: 1,
-            onComplete: resolve,
-          },
-          "same"
-        );
+        .to(".imagemFlecha", {
+          opacity: 1,
+          onComplete: resolve,
+        });
     });
   }
 
