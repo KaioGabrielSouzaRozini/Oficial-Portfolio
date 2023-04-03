@@ -21,7 +21,6 @@ export default class Precarregamento extends EventEmitter {
   setEspolhos() {
     this.quarto = this.experiencia.mundo.quarto.quartoAtual;
     this.quartoFilho = this.experiencia.mundo.quarto.quartoFilho;
-    console.log(this.quartoFilho);
   }
   primeiraIntroducao() {
     return new Promise((resolve) => {
@@ -865,38 +864,36 @@ export default class Precarregamento extends EventEmitter {
 
   onScroll(e) {
     if (e.deltaY > 0) {
-      this.removeEventListeners();
+      this.removeEvento();
       this.comecaIntroducao();
     }
   }
-  onTouch(e) {
+  noToque(e) {
     this.initalY = e.touches[0].clientY;
   }
 
-  onTouchMove(e) {
+  noMovimento(e) {
     let currentY = e.touches[0].clientY;
     let difference = this.initalY - currentY;
     if (difference > 0) {
-      console.log("swipped up");
-      this.removeEventListeners();
+      this.removeEvento();
       this.comecaIntroducao();
     }
     this.intialY = null;
   }
 
-  removeEventListeners() {
+  removeEvento() {
     window.removeEventListener("wheel", this.scrollUmaVez);
     window.removeEventListener("touchstart", this.touchStart);
     window.removeEventListener("touchmove", this.touchMove);
   }
 
   async introducao() {
-    console.log("eae1");
     await this.primeiraIntroducao();
-    console.log("eae2");
+
     this.scrollUmaVez = this.onScroll.bind(this);
-    this.touchStart = this.onTouch.bind(this);
-    this.touchMove = this.onTouchMove.bind(this);
+    this.touchStart = this.noToque.bind(this);
+    this.touchMove = this.noMovimento.bind(this);
     window.addEventListener("wheel", this.scrollUmaVez);
     window.addEventListener("touchstart", this.touchStart);
     window.addEventListener("touchmove", this.touchMove);
@@ -925,7 +922,7 @@ export default class Precarregamento extends EventEmitter {
     document.querySelector(".titulo-segundo-descricao").style.color =
       "var(--cor-texto)";
   }
-  move() {
+  mover() {
     if (this.device === "desktop") {
       this.room.position.set(-1, 0, 0);
     } else {
@@ -933,7 +930,7 @@ export default class Precarregamento extends EventEmitter {
     }
   }
 
-  scale() {
+  escala() {
     this.roomChildren.rectLight.width = 0;
     this.roomChildren.rectLight.height = 0;
 
@@ -946,11 +943,11 @@ export default class Precarregamento extends EventEmitter {
 
   update() {
     if (this.moveFlag) {
-      this.move();
+      this.mover();
     }
 
     if (this.scaleFlag) {
-      this.scale();
+      this.escala();
     }
   }
 }

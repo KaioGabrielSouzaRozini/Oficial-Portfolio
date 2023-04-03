@@ -1,8 +1,6 @@
 import Experiencia from "../Experiencia";
-import * as THREE from "three";
 import GSAP from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger.js";
-import ASScroll from "@ashthornton/asscroll";
 
 export default class Controles {
   constructor() {
@@ -34,8 +32,6 @@ export default class Controles {
     ScrollTrigger.matchMedia({
       // PC
       "(min-width: 969px)": () => {
-        console.log("pc");
-
         this.quarto.scale.set(0.3, 0.3, 0.3);
         this.luz.position.set(-2.14965, -2.61245, 3.10312);
 
@@ -124,7 +120,6 @@ export default class Controles {
 
       // Mobile
       "(max-width: 969px)": () => {
-        console.log("mobile");
         this.quarto.scale.set(0.27, 0.27, 0.27);
         this.luz.position.set(-2.14965, -2.61245, 3.10312);
 

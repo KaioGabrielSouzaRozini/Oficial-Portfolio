@@ -41,9 +41,8 @@ export default class Recursos extends EventEmitter {
   singleAssetLoaded(espolhos, file) {
     this.itens[espolhos.name] = file;
     this.loaded++;
-    console.log("espolhos estão carregando");
+
     if (this.loaded === this.queue) {
-      console.log("todos os espolhos foram carregado");
       this.emit("ready");
     }
   }
