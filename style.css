@@ -289,7 +289,7 @@ a {
 .secao {
   position: relative;
   width: 50%;
-  padding: 1000px 4%;
+  padding: 600px 4%;
   margin: 0;
   background-color: var(--cor-background);
   overflow: hidden;
@@ -309,7 +309,7 @@ a {
   position: relative;
   padding: 20% 5%;
   border-bottom: 2px solid var(--cor-vermelho);
-  padding-bottom: 300px;
+  padding-bottom: 250px;
 }
 
 .secao-detalhes {
