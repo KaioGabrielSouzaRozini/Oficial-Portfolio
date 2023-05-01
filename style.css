@@ -37,6 +37,7 @@ svg {
   --cor-azul: var(--cor-azul-luz);
   --cor-rosa: var(--cor-rosa-luz);
   --cor-vermelho: var(--cor-vermelho-luz);
+  --cor-link: var(--cor-vermelho-luz);
 }
 .escuro-tema {
   --cor-texto: var(--cor-texto-escuro);
@@ -44,11 +45,12 @@ svg {
   --cor-azul: var(--cor-texto-escuro);
   --cor-rosa: var(--cor-texto-escuro);
   --cor-vermelho: var(--cor-texto-escuro);
+  --cor-link: var(--cor-rosa-luz);
 }
 
 a {
   text-decoration: none;
-  color: var(--cor-vermelho-luz);
+  color: var(--cor-link);
 }
 
 /* Experiencia --------------------------------*/
@@ -309,7 +311,7 @@ a {
   position: relative;
   padding: 20% 5%;
   border-bottom: 2px solid var(--cor-vermelho);
-  padding-bottom: 250px;
+  padding-bottom: 100px;
 }
 
 .secao-detalhes {
@@ -328,7 +330,7 @@ a {
 .secao-texto {
   line-height: 2;
   margin-top: 18px;
-  font-size: 16px;
+  font-size: 18px;
   color: var(--cor-texto);
 }
 
@@ -342,6 +344,17 @@ a {
   height: 85px;
   margin-bottom: 40px;
   border-radius: 100px;
+}
+.divImgPerfil {
+  width: 390px;
+  margin-top: 50px;
+  border-radius: 400px;
+  background-color: var(--cor-vermelho);
+}
+.imgPerfil {
+  width: 300px;
+  margin-top: 80px;
+  border-radius: 300px;
 }
 
 /* Decoração seções ----------------------------------------*/
