@@ -60,10 +60,10 @@ export default class Ambiente {
         b: 255 / 255,
       });
       GSAP.to(this.luzSol, {
-        intensity: 1,
+        intensity: 1.1,
       });
       GSAP.to(this.luzAmbiente, {
-        intensity: 1,
+        intensity: 1.1,
       });
     }
   }

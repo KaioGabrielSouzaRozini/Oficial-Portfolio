@@ -107,7 +107,7 @@ export default class Precarregamento extends EventEmitter {
             y: 1,
             z: 1,
             ease: "back.out(1)",
-            duration: 0.4,
+            duration: 0.3,
           },
           "same"
         )
@@ -184,13 +184,17 @@ export default class Precarregamento extends EventEmitter {
           },
           "porta"
         )
-        .to(this.quartoFilho.portadentro.scale, {
-          x: 1,
-          y: 1,
-          z: 1,
-          ease: "back.out(1)",
-          duration: 0.2,
-        })
+        .to(
+          this.quartoFilho.portadentro.scale,
+          {
+            x: 1,
+            y: 1,
+            z: 1,
+            ease: "back.out(1)",
+            duration: 0.2,
+          },
+          "porta"
+        )
         .to(
           this.quartoFilho.tela3.scale,
           {
@@ -641,7 +645,7 @@ export default class Precarregamento extends EventEmitter {
             y: 1,
             z: 1,
             ease: "back.out(1)",
-            duration: 0.3,
+            duration: 0.1,
           },
           "same11"
         )
@@ -652,7 +656,7 @@ export default class Precarregamento extends EventEmitter {
             y: 1,
             z: 1,
             ease: "back.out(1)",
-            duration: 0.3,
+            duration: 0.1,
           },
           "same11"
         )
@@ -663,7 +667,7 @@ export default class Precarregamento extends EventEmitter {
             y: 1,
             z: 1,
             ease: "back.out(1)",
-            duration: 0.3,
+            duration: 0.1,
           },
           "same11"
         )
@@ -674,7 +678,7 @@ export default class Precarregamento extends EventEmitter {
             y: 1,
             z: 1,
             ease: "back.out(1)",
-            duration: 0.3,
+            duration: 0.1,
           },
           "same11"
         )
@@ -856,7 +860,7 @@ export default class Precarregamento extends EventEmitter {
         )
         .to(this.quarto.rotation, {
           y: 6.3,
-          duration: 3.5,
+          duration: 3,
           onComplete: resolve,
         });
     });
