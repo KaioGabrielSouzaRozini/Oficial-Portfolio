@@ -72,7 +72,7 @@ export default class Precarregamento extends EventEmitter {
           y: 1,
           z: 1,
           ease: "back.out(1)",
-          duration: 0.4,
+          duration: 0.3,
         })
         .to(this.quartoFilho.bocadelobo.scale, {
           x: 1,
@@ -95,7 +95,7 @@ export default class Precarregamento extends EventEmitter {
             y: 1,
             z: 1,
             ease: "back.out(1)",
-            duration: 0.4,
+            duration: 0.3,
           },
 
           "same"
@@ -271,7 +271,7 @@ export default class Precarregamento extends EventEmitter {
           y: 1,
           z: 1,
           ease: "back.out(1)",
-          duration: 0.4,
+          duration: 0.3,
         })
         .to(this.quartoFilho.cercabase1.scale, {
           x: 1,

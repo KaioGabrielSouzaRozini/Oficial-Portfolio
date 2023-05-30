@@ -403,6 +403,17 @@ a {
   background-color: var(--cor-rosa);
 }
 
+.instaCopy {
+  width: 75%;
+  border-radius: 10%;
+  box-shadow: 10px 5px 5px var(--cor-rosa);
+  transition: 0.3s;
+  cursor: pointer;
+}
+.instaCopy:hover {
+  scale: 102%;
+}
+
 @media (max-width: 968px) {
   .secao {
     width: 100%;
