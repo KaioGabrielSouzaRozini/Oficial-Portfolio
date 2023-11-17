@@ -1,5 +1,5 @@
 # Oficial-Portfolio
-Meu portfolio oficial.
+Meu portfolio oficial. Sua estrutura foi feita em Vite com JS, além disso foi utilizado o blender para fazer a design e a construção do objeto 3D ao fundo do site.
 
 <div align="center">
   <div style="display: flex;">
